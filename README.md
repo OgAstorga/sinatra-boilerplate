@@ -53,3 +53,6 @@ stage | location
 build stage | `$REPO_PATH`
 release stage | `$RELEASE_PATH/<release-isodatetime>`
 run stage | `$RELEASE_PATH/current`
+
+## VI. Processes
+just follow [it](https://12factor.net/processes)
