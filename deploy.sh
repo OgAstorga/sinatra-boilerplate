@@ -2,12 +2,25 @@
 
 
 ######
+# Load .env vars
+declare -a config_envs=(
+  ".env.base"
+  ".env"
+)
+
+for env_file in "${config_envs[@]}"
+do
+  if [ -f $env_file ]; then
+    source $env_file
+  fi
+done
+
+
+######
 PWD=$(pwd)
 DATE=$(date +"%Y-%m-%dT%H-%M-%S")
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-if [ -z ${RELEASE_PATH+x} ]; then
-  RELEASE_PATH=$PWD/releases
-fi
+RELEASE_PATH="$(readlink -e $RELEASE_PATH)"
 DEST_PATH=$RELEASE_PATH/$DATE
 CREL_PATH=$RELEASE_PATH/current
 
