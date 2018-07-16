@@ -57,7 +57,7 @@ run stage | `$RELEASE_PATH/current`
 ## VI. Processes
 just follow [it](https://12factor.net/processes)
 
-## VIII. Port binding
+## VII. Port binding
 within a release/run stage path run
 
 ```bash
