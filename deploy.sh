@@ -32,11 +32,11 @@ do
   mkdir -p $(dirname $DEST)
 
   if [ -f $SOURCE ]; then
-    cp $SoOURCE $DEST
+    cp $SOURCE $DEST
     printf "*"
-  else
-    touch $DEST
-    printf "o"
+  elif [ -f "$SOURCE.default" ]; then
+    cp "$SOURCE.default" $DEST
+    printf "d"
   fi
 done
 
