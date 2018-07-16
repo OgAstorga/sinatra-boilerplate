@@ -33,3 +33,22 @@ Store URL/credentials in your config
 ```bash
 MONGO_URL=mongodb://localhost/mydb
 ```
+
+## V. Build, release, run
+Code releases are handled with a bash script `deploy.sh` that creates a folder under a specified release path (defaults to ./releases).
+
+Each code release bundles the current config, source code and gem dependencies into a single unique system folder
+
+```bash
+export RELEASE_PATH=<release_path>
+./deploy.sh
+```
+
+The last deploy will always be accesible via `$RELEASE_PATH/currenct` which is a soft link to `$RELEASE_PATH/<release-isodatetime>`
+
+**Staging**
+
+| stage | location |
+| build stage | `$REPO_PATH` |
+| release stage | `$RELEASE_PATH/<release-isodatetime>` |
+| run stage | `$RELEASE_PATH/current` |
