@@ -20,10 +20,25 @@ echo "destination path: $DEST_PATH"
 echo "copying source files to release folder"
 
 # copy config file
-if [ -f .env ]; then
-  mkdir -p $DEST_PATH
-  cp .env $DEST_PATH/.env
-fi
+declare -a keep=(
+  ".env"
+  "thin.yml"
+)
+
+for filename in "${keep[@]}"
+do
+  SOURCE=$PWD/$filename
+  DEST=$DEST_PATH/$filename
+  mkdir -p $(dirname $DEST)
+
+  if [ -f $SOURCE ]; then
+    cp $SoOURCE $DEST
+    printf "*"
+  else
+    touch $DEST
+    printf "o"
+  fi
+done
 
 # copy source files
 git ls-tree -r $BRANCH --name-only | while read ORIGIN

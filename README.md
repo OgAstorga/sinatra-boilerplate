@@ -56,3 +56,9 @@ run stage | `$RELEASE_PATH/current`
 
 ## VI. Processes
 just follow [it](https://12factor.net/processes)
+
+## VIII. Port binding
+within a release/run stage path run
+```bash
+bundle exec thin -R config.ru -C thin.yml
+```
