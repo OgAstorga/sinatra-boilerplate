@@ -44,7 +44,7 @@ export RELEASE_PATH=<release_path>
 ./deploy.sh
 ```
 
-The last deploy will always be accesible via `$RELEASE_PATH/currenct` which is a soft link to `$RELEASE_PATH/<release-isodatetime>`
+The last deploy will always be accesible via `$RELEASE_PATH/current` which is a soft link to `$RELEASE_PATH/<release-isodatetime>`
 
 **Staging**
 
