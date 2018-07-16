@@ -48,7 +48,8 @@ The last deploy will always be accesible via `$RELEASE_PATH/currenct` which is a
 
 **Staging**
 
-| stage | location |
-| build stage | `$REPO_PATH` |
-| release stage | `$RELEASE_PATH/<release-isodatetime>` |
-| run stage | `$RELEASE_PATH/current` |
+stage | location
+--- | ---
+build stage | `$REPO_PATH`
+release stage | `$RELEASE_PATH/<release-isodatetime>`
+run stage | `$RELEASE_PATH/current`
