@@ -3,7 +3,7 @@
 
 ######
 PWD=$(pwd)
-DATE=$(date +"%Y-%m-%dT%H:%M:%S")
+DATE=$(date +"%Y-%m-%dT%H-%M-%S")
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ -z ${RELEASE_PATH+x} ]; then
   RELEASE_PATH=$PWD/releases
