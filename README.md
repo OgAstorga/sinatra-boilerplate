@@ -59,6 +59,10 @@ just follow [it](https://12factor.net/processes)
 
 ## VIII. Port binding
 within a release/run stage path run
+
 ```bash
 bundle exec thin -R config.ru -C thin.yml
 ```
+
+**Note**
+`thin.yml` is a thin configuration file that is always present whit the contents of `$REPO_PATH/thin.yml.sample`. to override this config file, create your own `$REPO_PATH/thin.yml`
