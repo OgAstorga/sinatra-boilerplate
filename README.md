@@ -11,7 +11,7 @@ Dependencies are handled through bundle
 bundle install --path .bundle
 ```
 
-### III. Config
+## III. Config
 Environment variables are handled through dotenv
 
 There are two files to achieve this
@@ -24,4 +24,12 @@ LANG=es
 `.env` not tracked it only exists each deploy and overwrites `.env.base` defined keys
 ```bash
 LANG=en
+```
+
+## IV. Backing services
+Store URL/credentials in your config
+
+`.env.base`
+```bash
+MONGO_URL=mongodb://localhost/mydb
 ```
