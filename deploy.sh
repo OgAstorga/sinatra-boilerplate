@@ -41,12 +41,12 @@ do
 done
 
 # copy source files
-git ls-tree -r $BRANCH --name-only | while read ORIGIN
+git ls-tree -r $BRANCH --name-only | while read SOURCE
 do
-  DEST=$DEST_PATH/$ORIGIN
+  DEST=$DEST_PATH/$SOURCE
 
   mkdir -p $(dirname $DEST)
-  cp $ORIGIN $DEST
+  cp $SOURCE $DEST
   printf "."
 done
 
