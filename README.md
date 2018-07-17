@@ -66,3 +66,18 @@ bundle exec thin -R config.ru -C thin.yml
 
 **Note**
 `thin.yml` is a thin configuration file that is always present whit the contents of `$REPO_PATH/thin.yml.sample`. to override this config file, create your own `$REPO_PATH/thin.yml`
+
+## VIII. Concurrency
+To install this project as a systemd service run:
+```bash
+make install
+```
+
+It will create a systemd unit called `${SLUG}d.service` (SLUG defaults to sinatra-boilerplate) so after the instalation you should be able to start, enable, stop and disable such service as follows:
+```bash
+# supose SLUG = first-app
+systemctl start first-appd
+systemctl enable first-appd
+systemctl stop first-appd
+systemctl disable first-appd
+```
