@@ -16,6 +16,11 @@ do
 done
 
 
+#####
+# Make sure that release path (relative/absolute) exists
+mkdir -p $RELEASE_PATH
+
+
 ######
 PWD=$(pwd)
 DATE=$(date +"%Y-%m-%dT%H-%M-%S")
