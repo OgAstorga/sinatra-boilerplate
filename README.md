@@ -81,3 +81,6 @@ systemctl enable first-appd
 systemctl stop first-appd
 systemctl disable first-appd
 ```
+
+## IX. Disposability
+Achieved by **V.**, **VII.** and **VIII.**
