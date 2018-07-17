@@ -82,3 +82,7 @@ fi
 
 ln -sr $DEST_PATH $CREL_PATH
 printf "done\n\n"
+
+
+######
+echo "finished."
